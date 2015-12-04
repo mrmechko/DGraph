@@ -2,7 +2,7 @@ package dgraph
 
 import scala.collection.immutable.Queue
 
-trait NodeMatchLike[N] extends Product with Serializable{
+trait NodeMatchLike[+N] extends Product with Serializable{
   def eval:(N => Boolean)
 }
 
@@ -13,7 +13,7 @@ case class NodeMatchANDCons[N](eval:(N => Boolean)) extends NodeMatchLike[N]
 case class NodeMatchOR[N](eval:(N => Boolean)) extends NodeMatchLike[N]
 
 
-trait EdgeMatchLike[E] extends Product with Serializable{
+trait EdgeMatchLike[+E] extends Product with Serializable{
   def eval:(E => Boolean)
 }
 
