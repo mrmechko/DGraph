@@ -1,4 +1,7 @@
 # DGraph
+
+https://travis-ci.org/mrmechko/DGraph.svg
+
 An implementation of directed graph with powerful graph matching property
 
 **Anything could change in next releases** 
